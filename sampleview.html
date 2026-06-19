@@ -1,0 +1,253 @@
+<html>
+<head>	
+	<title>Test</title>
+	<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">	
+	<script src="https://mobiledemo.jaspersoft.com/jasperserver-pro/client/visualize.js"></script>
+	<style type="text/css">
+		#cont {
+			background-color: 23d47;
+		}
+
+		#portfolio #portfolio-title {
+			background-color: #2E3747 !important;
+		}
+		p {
+			color: white;
+		}
+
+		.a{
+			border: none;
+			background-color: white;
+  			color: black;
+  			text-align: center;
+  			text-decoration: none;
+			/*display: inline-block;*/
+			/*font-size: 16px;*/
+			/*margin: 4px 2px;*/
+			/*cursor: pointer;*/
+		}
+		
+	</style>
+</head>
+<body>
+	<!-- <center>
+		<h1>Student Registration</h1>
+	</center>
+	<hr> -->
+	<nav class="navbar navbar-expand-sm bg-light">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+	  			<span class="glyphicon glyphicon-home"></span><a class="nav-link" href="#">Library</a>
+			</li>
+		</ul>
+		<ul class="nav navbar-nav">
+			 <li class="dropdown">
+	  			<a href="#" class="dropdown-toggle" role="button">View<span class="caret"></span></a>
+			</li>
+			 <li class="dropdown">
+	  			<a href="#" class="dropdown-toggle" role="button">Manage<span class="caret"></span></a>
+			</li>
+		</ul>
+	</nav>
+	<br>
+	<div class="container-fluid" id="cont">
+		<div class="row">
+			<div class="col-md-2">
+				<p>* State</p>
+				<select class="form-control" id="state">
+					<option  value="1">Karnataka</option>
+					<option  value="2">Goa</option>
+					<option  value="3">Telangana</option>
+					<option  value="4">Delhi</option>
+				</select> 
+			</div>
+			<div class="col-md-2">
+				<p>Level 1</p>
+				<select class="form-control" id="level1">
+					<option  value="1">level 1</option>
+					<option  value="2">level 2</option>
+					<option  value="3">level 3</option>
+					<option  value="4">level 4</option>
+				</select>
+			</div>
+			<div class="col-md-2">
+				<p>Level 2</p>
+				<select class="form-control" id="level2">
+					<option  value="1">level 1</option>
+					<option  value="2">level 2</option>
+					<option  value="3">level 3</option>
+					<option  value="4">level 4</option>
+				</select>
+			</div>
+			<div class="col-md-2">
+				<p>Level 3</p>
+				<select class="form-control" id="level3">
+					<option  value="1">level 1</option>
+					<option  value="2">level 2</option>
+					<option  value="3">level 3</option>
+					<option  value="4">level 4</option>
+				</select>
+			</div>
+			<div class="col-md-2">
+				<p>* FY</p>
+				<select class="form-control" id="fy">
+					<option  value="1">2018-2019</option>
+					<option  value="2">2017-2018</option>
+					<option  value="3">2016-2017</option>
+					<option  value="4">2015-2016</option>
+				</select>
+			</div>
+			<div class="col-md-2">
+				<p>* Tax Period</p>
+				<select class="form-control" id="tperiod">
+					<option  value="1">1 Year</option>
+					<option  value="2">2 Year</option>
+					<option  value="3">3 Year</option>
+				</select>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-4">
+				<p>* Tax Payer's Group</p>
+				<select class="form-control"  id="tpgroup">
+					<option  value="1">Direct Taxes</option>
+					<option  value="2">Wealth Tax</option>
+					<option  value="3">Property Tax/Capital Gains Tax</option>
+					<option  value="4">Gift Tax/ Inheritance or Estate Tax</option>
+				</select>
+			</div>
+			<div class="col-md-4">
+				<p>* Predominant Business Sector</p>
+				<select class="form-control" id="bsector">
+					<option  value="1">Mining</option>
+					<option  value="2">Forming</option>
+					<option  value="3">fishing</option>
+				</select>
+			</div>
+			<div class="col-md-4">
+				<p>* Predominant Nature of Business</p>
+				<select class="form-control" id="pnb">
+					<option  value="1">Ground Rules</option>
+					<option  value="2">Ground Rules Enjoy Learning</option>
+					<option  value="2">Unit 1 Nature of Business Copyright © 2004 Pearson Education, Inc. Slide 6-5</option>
+				</select>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-1">
+				<button class="btn btn-primary" onclick="getData();">Apply</button>
+			</div>
+			<div class="col-md-1">
+				<button class="btn btn-primary a" onclick="insert();">Reset</button>
+			</div>
+			<div class="col-md-1">
+				<button class="btn btn-primary a" onclick="insert();">Save</button>
+			</div>
+		</div>
+		<br>
+	</div>
+	
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script> -->
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// $("#state").empty();
+			// $("#level").empty();
+		});	
+
+visualize({
+    auth: {
+        name: "joeuser",
+        password: "joeuser",
+        organization: "organization_1"
+    }
+}, function (v) {
+    //add custom export format
+    //(should throw a proper error)
+    var reportExports =  v.report
+                    .exportFormats
+                    .concat(["json"]);
+        $select = buildControl("Export to: ",reportExports),
+        $button = $("#button"),
+        report = v.report({
+            resource: "/public/Samples/Reports/AllAccounts",
+            container: "#container",
+
+            success: function () {
+                button.removeAttribute("disabled");
+            },
+
+            error: function (error) {
+                console.log(error);
+            }
+        });
+
+    $button.click(function () {
+        
+        console.log($select.val());
+        
+        report.export({
+            //export options here        
+            outputFormat: $select.val(),
+            //exports all pages if not specified
+            //pages: "1-2"
+        }, function (link) {
+           var url = link.href ? link.href : link;
+           window.location.href = url;
+        }, function (error) {
+            console.log(error);
+        });
+    });
+
+    function buildControl(name, options) {
+
+        function buildOptions(options) {
+            var template = "<option>{value}</option>";
+            return options.reduce(function (memo, option) {
+                return memo + template.replace("{value}", option);
+            }, "")
+        }
+
+        var template = "<label>{label}</label><select>{options}</select><br>",
+            content = template.replace("{label}", name)
+                .replace("{options}", buildOptions(options));
+
+        var $control = $(content);
+        $control.insertBefore($("#button"));
+        //return select
+        return $($control[1]);
+    }
+});
+		// obj = {};
+		// function getData(){
+		// 	obj.state = $("#state").val();
+		// 	obj.level1 = $("#level1").val();
+		// 	obj.level2 = $("#level2").val();
+		// 	obj.level3 = $("#level3").val();
+		// 	obj.fy = $("#fy").val();
+		// 	obj.tperiod = $("#tperiod").val();
+		// 	obj.tpgroup = $("#tpgroup").val();
+		// 	obj.bsector = $("#bsector").val();
+		// 	obj.pnb = $("#pnb").val();
+		// 	console.log(obj);	
+		// }
+		
+	</script>
+<br>
+<button id="button" disabled>Export</button>
+<!--Provide container to render your visualization-->
+<div id="container"></div>
+</body>
+</html>
+<?php
+
+
+?>
